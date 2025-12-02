@@ -1,13 +1,13 @@
- // SPDX-License-Identifier: MIT
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.24;
 
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
 contract ChamematItem is ERC721URIStorage, Ownable {
-    uint256 public nextTokenId;
+    uint256 public nextTokenId = 1;
 
-    // 0=Common(Iron), 1=Uncommon(Steel), 2=Rare(Mithril), 3=Epic(Orichalcum), 4=Legendary(Excalibur)
+    // 0=Common, 1=Uncommon, 2=Rare, 3=Epic, 4=Legendary
     mapping(uint256 => uint8) public tier;
     mapping(uint256 => uint16) public attack;
     mapping(uint256 => uint16) public defense;
