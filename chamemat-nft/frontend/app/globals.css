@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 참이맛 전용 커스텀 스타일 */
+@layer base {
+  :root {
+    --background: 17 17 17;
+    --foreground: 255 255 255;
+    --primary: 251 191 36;
+    --primary-foreground: 0 0 0;
+  }
+}
+
+body {
+  @apply bg-gray-900 text-white min-h-screen;
+}
